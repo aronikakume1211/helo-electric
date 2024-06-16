@@ -1,0 +1,112 @@
+.custom_woocommerce_products {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 35px;
+    // justify-content: space-between;
+    transition: all 0.23s ease-in-out;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .custom_woocommerce_product {
+        width: 411px;
+        min-height: 451px;
+        background: #F2F2F2;
+        padding: 20px;
+        overflow: hidden;
+        padding-bottom: 0px;
+        transition: all 0.23s ease-in-out;
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
+
+        .product_image_container {
+            width: 100%;
+            height: 238px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 185px;
+                height: 138px;
+                object-fit: contain;
+            }
+        }
+    }
+
+    .hr {
+        height: 2px;
+        background-color: #ccc;
+    }
+}
+
+.add_to_cart_more_details_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    gap: 30px;
+
+    .vertical {
+        height: 30px;
+        width: 2px;
+        background: #ccc;
+    }
+
+    a {
+        font-weight: 600;
+        font-size: 18px;
+        color: #D94629;
+    }
+}
+
+.price_container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+}
+
+.products_heading_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.products_categories ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+    background-color: #F5F5F5;
+    padding: 0px 20px;
+
+    
+
+
+}
+
+.products_categories {
+    button {
+        border: none;
+        background: inherit;
+        border-radius: 0;
+        color: #000;
+        padding: 6px 0px;
+        &:focus-visible{
+            border: none;
+            outline: none;
+            border-bottom: 2px solid #D94629;
+        }
+    }
+
+    .mixitup-control-active {
+        border-bottom: 2px solid #D94629;
+        outline: none;
+    }
+}

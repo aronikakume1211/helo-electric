@@ -28,4 +28,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
         }).mount();
     }
+
+    // mixitup
+    if ((document.getElementsByClassName("product-mixit").length > 0)) {
+        const mixitupContainer = (document.getElementsByClassName("product-mixit"))[0];
+        mixitup(mixitupContainer, {
+          load: {
+            filter: ".all-variants",
+          },
+          animation: {
+            duration: 1000,
+            nudge: false,
+            reverseOut: false,
+            effects: "",
+          },
+        });
+      }
 })

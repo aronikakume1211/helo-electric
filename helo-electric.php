@@ -27,6 +27,7 @@ function test_plugin_scripts()
     wp_enqueue_style('splidecss', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css', array(), null);
     wp_enqueue_script('testimonail-script', plugins_url('assets/js/news.js', __FILE__), array(), null, true);
     wp_enqueue_script('splidejs', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js', array(), null, true);
+    wp_enqueue_script('mixitup', 'https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js', array(), null, true);
 }
 
 function helo_widget_categories($elements_manager)
@@ -56,9 +57,11 @@ function register_essential_custom_widgets($widgets_manager)
 {
     require_once(__DIR__ . '/widgets/news.php');
     require_once(__DIR__ . '/widgets/videos.php');
+    require_once(__DIR__ . '/widgets/products.php');
 
     $widgets_manager->register(new News());
     $widgets_manager->register(new Videos());
+    $widgets_manager->register(new Products_List());
 }
 
 add_action('elementor/widgets/register', 'register_essential_custom_widgets');
